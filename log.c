@@ -87,7 +87,7 @@ void log_log(log_logLevel_t level, const char * const func_name, const char * co
     //invoke callback function if registered.
     if (log_settings.cb.fn)
     {
-        if (log_settings.cb.level <= level)
+        if (log_settings.cb.level < level)
         {
             log_settings.cb.fn(level, func_name, format,args);
         }
