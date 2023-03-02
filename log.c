@@ -23,24 +23,20 @@ static struct log log_settings =
     .cb.level = LOG_LEVEL_INFO
 };
 
-static const char * log_level_strings[] ={"DEBUG",
-                                          "INFO",
-                                          "WARNING",
-                                          "ERROR",
-                                          "CRITICAL"};
+static const char * log_level_strings[] ={"DEBUG","INFO","WARNING","ERROR","CRITICAL"};
 
 
 const char * log_getLevelString (log_logLevel_t level)
 {
     switch (level)
     {
-    case LOG_LEVEL_DEBUG:     return log_level_strings[LOG_LEVEL_DEBUG];
-    case LOG_LEVEL_INFO:      return log_level_strings[LOG_LEVEL_INFO];
-    case LOG_LEVEL_WARN:      return log_level_strings[LOG_LEVEL_WARN];
-    case LOG_LEVEL_ERROR:     return log_level_strings[LOG_LEVEL_ERROR];
-    case LOG_LEVEL_CRITICAL:  return log_level_strings[LOG_LEVEL_CRITICAL];
+        case LOG_LEVEL_DEBUG:     return log_level_strings[LOG_LEVEL_DEBUG];
+        case LOG_LEVEL_INFO:      return log_level_strings[LOG_LEVEL_INFO];
+        case LOG_LEVEL_WARN:      return log_level_strings[LOG_LEVEL_WARN];
+        case LOG_LEVEL_ERROR:     return log_level_strings[LOG_LEVEL_ERROR];
+        case LOG_LEVEL_CRITICAL:  return log_level_strings[LOG_LEVEL_CRITICAL];
     
-    default: return "";
+        default: return "";
     }
 }
 
